@@ -1,0 +1,114 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clr{
+    clear:both;
+}
+
+.gallery-wrap{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery-wrap h1 {
+    letter-spacing: 4px;
+}
+
+label{
+    width: 15%;
+    display: inline-block;
+    border: 2px solid #1f2732;
+    color: #262626;
+    letter-spacing: 2px;
+    padding: 10px 0;
+    margin: 0 8px;
+    margin-bottom: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .8s;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+input[type="radio"]:checked + label{
+    background: #1f2732;
+    color: #fff;
+}
+
+input[type="radio"][id="food"]:checked ~ .other,
+input[type="radio"][id="food"]:checked ~ .landmarks{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transition: .8s;
+}
+
+input[type="radio"][id="landmarks"]:checked ~ .food,
+input[type="radio"][id="landmarks"]:checked ~ .other{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transition: .8s;
+}
+
+
+input[type="radio"][id="other"]:checked ~ .food,
+input[type="radio"][id="other"]:checked ~ .landmarks{
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transition: .8s;
+}
+
+.gallery-image{
+    width: 23%;
+    height: 300px;
+    float: left;
+    margin: 1%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+.gallery-image img{
+    width: 100%;
+    height: 300px;
+   object-fit: cover;
+   transition: .5s;
+}
+
+.gallery-image:hover img{
+    transform: scale(1.1);
+    transition: 5s;
+}
+
+
+
+/* .caption h4{
+    font-size: 35px;
+    color: #ffe100;
+    margin-bottom: 15px;
+}
+
+
+.caption{
+    border: 2px red solid;
+} */
+
+
+
